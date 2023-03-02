@@ -47,14 +47,14 @@ console.log (CemberinCevresi(5));
 			4. Hesaplanan çemberin alanı döndürülecektir.
 		*/
 		
-function CemberinAlani(/* kodlar buraya */){
-	/* kodlar buraya */
+function CemberinAlani(yaricap1,pi1){
+	const alan = pi1 * Math.pow(yaricap1,2);
+	return alan ;
 }
-
-
+console.log(CemberinAlani(5,pi));
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
-
+console.log(CemberinAlani(15,pi))
 
 /* 	GÖREV 3:
 		- Sayfanın en üstünde global değişken olarak tanımlanmış bir sayilar dizisi bulunmaktadır. Bu dizi içinde 0 ile 1000 arasında rasgele oluşturulmuş tam sayılar ve ondalıklı sayılar bulunmaktadır. Bu diziyi kullanarak aşağıdakileri uygulayın:
@@ -71,42 +71,65 @@ function CemberinAlani(/* kodlar buraya */){
 	
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-
+console.log(sayilar.length);
 
 	var ucetambolunenler, enkucuk, enbuyuk, ucebolunenlerintoplami, besyuzdenkucuksayilar, siralisayilar, tekraredensayilar;
 	
 	//3a çözümü
-
-	/* kodlar buraya */
-	
+	enbuyuk = sayilar[0];
+	enkucuk = sayilar[1];
+	for(let i = 0; i <sayilar.length; i++) {
+		if(sayilar[i] > enbuyuk){
+			enbuyuk = sayilar[i];
+		} else if(sayilar[i] < enkucuk){
+			enkucuk = sayilar[i];
+		}
+	}
 	
 	
 	// 3b çözümü:
 
-	/* kodlar buraya */
+	ucetambolunenler = [];
+	let degerler = sayilar.forEach(x => { 
+		if(x % 3 === 0){
+			return ucetambolunenler.push(x)
+		} 
+	} );
+		console.log(ucetambolunenler);
+ 
+
 		
 		
 		
 	//3c çözümü:
 	
-	/* kodlar buraya */
-
+ ucebolunenlerintoplami = ucetambolunenler.reduce((ilk,son) => (ilk  + son),0)
 	
 	
 	//3d çözümü
 	
-	/* kodlar buraya */
-
-
-
+	besyuzdenkucuksayilar =sayilar.filter((y)=>y<500);
+    
+	
+	
 	//3e çözümü
+	siralisayilar = besyuzdenkucuksayilar.sort(function(a, b){return a - b});
 
-	/* kodlar buraya */
 	
 	
 	//3f çözümü
-	
-	/* kodlar buraya */
+ tekraredensayilar =  [];
+ for(let i = 0;i<sayilar.length;i++){
+	let sayac = 0;
+	for(let a = 0;a<sayilar.length;a++){
+		if(sayilar[a] === sayilar[a]){
+			sayac++
+			if(sayac>1){
+		tekraredensayilar.push(`${sayilar[i]} sayısı ${sayac} kere tekrar edilmiştir`);
+		}
+		}
+	}
+}
 
 
 

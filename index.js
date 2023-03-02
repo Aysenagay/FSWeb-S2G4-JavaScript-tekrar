@@ -30,12 +30,12 @@ console.log (KareninAlani(10));
 		*/
 
 function CemberinCevresi(yaricap){
-	/* kodlar buraya */
+	return 2*pi*yaricap
 }
-
+console.log (CemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
-
+console.log (CemberinCevresi(5));
 
 
 
